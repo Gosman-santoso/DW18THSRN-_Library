@@ -1,0 +1,112 @@
+// variable
+$primary-color: #EE4622;
+// 
+.box-landing {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.vektor1 {
+    position: absolute;
+    z-index: 1;
+    width: 85vh;
+    right: 0;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+header {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    h1 {
+        font-family: "Times New Roman";
+        font-style: italic;
+        font-size: 36px;
+        line-break: 41.4px;
+    }
+}
+
+.cover {
+    width: 90%;
+    height: 65vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    h1 {
+        font-family: "Times New Roman";
+        font-size: 115px;
+        line-height: 94.86px;
+        width: 80%;
+    }
+    p {
+        width: 50%;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32.78px;
+    }
+    .sign-button {
+        button {
+            font-size: 18px;
+            line-height: 24.59px;
+            padding: 10px 50px;
+            background-color: rgb(231, 231, 231);
+            border-radius: 5px;
+            border: none;
+            margin-right: 50px;
+            cursor: pointer;
+        }
+        button.active {
+            background-color: $primary-color;
+            color: white;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .cover {
+        height: 50vh;
+        h1 {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .cover {
+        h1 {
+            font-size: 90px;
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .cover {
+        height: 40vh;
+        h1 {
+            color: white;
+            font-size: 70px;
+        }
+        p {
+            color: white;
+            width: 80%;
+        }
+        button {
+            margin-top: 10px;
+        }
+    }
+}

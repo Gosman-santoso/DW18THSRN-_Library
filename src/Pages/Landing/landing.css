@@ -1,0 +1,122 @@
+.box-landing {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.vektor1 {
+  position: absolute;
+  z-index: 1;
+  width: 85vh;
+  right: 0;
+}
+
+.vektor1 img {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+header h1 {
+  font-family: "Times New Roman";
+  font-style: italic;
+  font-size: 36px;
+  line-break: 41.4px;
+}
+
+.cover {
+  width: 90%;
+  height: 65vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.cover h1 {
+  font-family: "Times New Roman";
+  font-size: 115px;
+  line-height: 94.86px;
+  width: 80%;
+}
+
+.cover p {
+  width: 50%;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32.78px;
+}
+
+.cover .sign-button button {
+  font-size: 18px;
+  line-height: 24.59px;
+  padding: 10px 50px;
+  background-color: #e7e7e7;
+  border-radius: 5px;
+  border: none;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.cover .sign-button button.active {
+  background-color: #EE4622;
+  color: white;
+}
+
+@media screen and (max-width: 800px) {
+  .cover {
+    height: 50vh;
+  }
+  .cover h1 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .cover h1 {
+    font-size: 90px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .cover {
+    height: 40vh;
+  }
+  .cover h1 {
+    color: white;
+    font-size: 70px;
+  }
+  .cover p {
+    color: white;
+    width: 80%;
+  }
+  .cover button {
+    margin-top: 10px;
+  }
+}
+/*# sourceMappingURL=landing.css.map */
