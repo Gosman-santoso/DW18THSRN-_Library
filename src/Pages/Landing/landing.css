@@ -1,15 +1,15 @@
 .box-landing {
   width: 100%;
   height: 100vh;
-  position: relative;
   overflow: hidden;
 }
 
 .vektor1 {
   position: absolute;
-  z-index: 1;
-  width: 85vh;
+  z-index: -1;
   right: 0;
+  width: 85vh;
+  float: right;
 }
 
 .vektor1 img {
@@ -18,9 +18,6 @@
 }
 
 header {
-  position: relative;
-  z-index: 1;
-  width: 90%;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31,6 +28,7 @@ header {
 }
 
 header img {
+  margin-left: 10vh;
   width: 50px;
   height: 50px;
   margin-right: 10px;
@@ -44,32 +42,28 @@ header h1 {
 }
 
 .cover {
-  width: 90%;
+  -webkit-transform: translateY(20vh);
+          transform: translateY(20vh);
   height: 65vh;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-  z-index: 1;
+  margin-left: 5vh;
 }
 
 .cover h1 {
   font-family: "Times New Roman";
   font-size: 115px;
   line-height: 94.86px;
-  width: 80%;
+  width: 60%;
 }
 
 .cover p {
+  margin-top: 10vh;
+  margin-bottom: 3vh;
   width: 50%;
   font-weight: 400;
   font-size: 24px;
   line-height: 32.78px;
+  width: 40%;
 }
 
 .cover .sign-button button {
@@ -89,9 +83,6 @@ header h1 {
 }
 
 @media screen and (max-width: 800px) {
-  .cover {
-    height: 50vh;
-  }
   .cover h1 {
     width: 100%;
   }
@@ -104,12 +95,9 @@ header h1 {
 }
 
 @media screen and (max-width: 530px) {
-  .cover {
-    height: 40vh;
-  }
   .cover h1 {
-    color: white;
     font-size: 70px;
+    color: white;
   }
   .cover p {
     color: white;
