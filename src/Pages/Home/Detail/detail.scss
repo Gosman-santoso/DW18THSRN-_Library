@@ -1,0 +1,79 @@
+.box-detail {
+    // background-color: lightblue;
+    min-height: 100vh;
+    width: 71.5%;
+    margin-left: 35vh;
+    margin-top: 5.3vh;
+    padding-bottom: 5.3vh;
+    main {
+        // background-color: lightgreen;
+        margin-left: 16%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding-right: 3vh;
+        .cover-detail {
+            // background: salmon;
+            display: flex;
+            align-self: flex-start;
+            width: 100%;
+            height: 56vh;
+            border-bottom: 2px solid rgb(216, 216, 216);
+            img {
+                align-self: flex-start;
+                width: 35vh;
+                margin-right: 5vh;
+            }
+            .des-detail {
+                h1 {
+                    font-size: 35px;
+                }
+                p {
+                    font-size: 14.5px;
+                    margin-top: 5px;
+                    color: #929292;
+                }
+                ul {
+                    margin-top: 4vh;
+                    list-style: none;
+                    li {
+                        margin: 1vh 0;
+                        h2 {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .about {
+            // background-color: salmon;
+            padding: 5vh 1vh 2vh 0;
+            overflow: auto;
+            p {
+                color: #929292;
+                font-size: 14.5px;
+                line-height: 27px;
+                margin: 2vh 0;
+                text-align: justify;
+            }
+            .boxBtn {
+                float: right;
+                button {
+                    padding: 10px 15px;
+                    background-color: rgb(236, 236, 236);
+                    border: none;
+                    text-align: center;
+                    border-radius: 5px;
+                }
+                button.active {
+                    background: #ee4622;
+                    color: white;
+                    margin-right: 5vh;
+                }
+                button:hover {
+                    box-shadow: 0 0 5px gray;
+                }
+            }
+        }
+    }
+}

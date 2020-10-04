@@ -1,0 +1,50 @@
+.box-library {
+    width: 80%;
+    min-height: 100vh;
+    margin: auto;
+    align-self: flex-start;
+    // background: salmon;
+    .list-book {
+        margin-left: 23.5%;
+        margin-top: 4.5vh;
+        // background: salmon;
+        h1 {
+            font-size: 30px;
+            margin-left: 2vh;
+            margin-bottom: 2vh;
+            font-weight: 700;
+        }
+        ul {
+            // background: lightblue;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            div {
+                width: 22vh;
+                transition: 0.2s;
+                margin-bottom: 5vh;
+                margin: 2vh 2vh;
+                img {
+                    width: 100%;
+                }
+                h5,
+                p {
+                    padding: 0 5px;
+                }
+                h5 {
+                    font-size: 15px;
+                    margin: 5px 0;
+                    font-weight: 700;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+            div:hover {
+                opacity: 0.6;
+                cursor: pointer;
+            }
+        }
+    }
+}

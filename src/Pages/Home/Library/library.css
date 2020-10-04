@@ -1,0 +1,64 @@
+.box-library {
+  width: 80%;
+  min-height: 100vh;
+  margin: auto;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.box-library .list-book {
+  margin-left: 23.5%;
+  margin-top: 4.5vh;
+}
+
+.box-library .list-book h1 {
+  font-size: 30px;
+  margin-left: 2vh;
+  margin-bottom: 2vh;
+  font-weight: 700;
+}
+
+.box-library .list-book ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.box-library .list-book ul div {
+  width: 22vh;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-bottom: 5vh;
+  margin: 2vh 2vh;
+}
+
+.box-library .list-book ul div img {
+  width: 100%;
+}
+
+.box-library .list-book ul div h5,
+.box-library .list-book ul div p {
+  padding: 0 5px;
+}
+
+.box-library .list-book ul div h5 {
+  font-size: 15px;
+  margin: 5px 0;
+  font-weight: 700;
+}
+
+.box-library .list-book ul div p {
+  font-size: 14px;
+}
+
+.box-library .list-book ul div:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+/*# sourceMappingURL=library.css.map */

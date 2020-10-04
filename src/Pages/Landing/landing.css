@@ -1,24 +1,27 @@
 .box-landing {
   width: 100%;
   height: 100vh;
+  position: relative;
   overflow-y: hidden;
+  background-color: white;
 }
 
-.vektor1 {
+.box-landing .vektor1 {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   right: 0;
   width: 85vh;
   float: right;
 }
 
-.vektor1 img {
+.box-landing .vektor1 img {
   width: 100%;
   height: 100%;
 }
 
-header {
-  width: 90%;
+.box-landing header {
+  position: relative;
+  width: 80%;
   margin: auto;
   margin-top: 2vh;
   display: -webkit-box;
@@ -29,23 +32,24 @@ header {
           align-items: center;
 }
 
-header img {
+.box-landing header img {
   width: 50px;
   height: 50px;
   margin-right: 10px;
 }
 
-header h1 {
+.box-landing header h1 {
   font-family: "Times New Roman";
   font-style: italic;
   font-size: 36px;
   line-break: 41.4px;
+  font-weight: 700;
 }
 
-.cover {
+.box-landing .cover {
   -webkit-transform: translateY(10vh);
           transform: translateY(10vh);
-  width: 90%;
+  width: 80%;
   height: 60vh;
   margin: auto;
   display: -webkit-box;
@@ -57,26 +61,32 @@ header h1 {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: relative;
 }
 
-.cover h1 {
+.box-landing .cover h1 {
   font-family: "Times New Roman";
-  font-size: 115px;
+  font-size: 90px;
   line-height: 94.86px;
   width: 60%;
+  font-weight: 600;
 }
 
-.cover p {
+.box-landing .cover p {
   margin-top: 10vh;
   margin-bottom: 3vh;
   width: 50%;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 32.78px;
   width: 40%;
 }
 
-.cover .sign-button button {
+.box-landing .cover .sign .box-input input {
+  width: 100%;
+}
+
+.box-landing .cover .sign button {
   font-size: 18px;
   line-height: 24.59px;
   padding: 10px 50px;
@@ -85,11 +95,14 @@ header h1 {
   border: none;
   margin-right: 50px;
   cursor: pointer;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
-.cover .sign-button button.active {
-  background-color: #EE4622;
-  color: white;
+.box-landing .cover .sign .active {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: #ee4622 !important;
 }
 
 @media screen and (max-width: 800px) {

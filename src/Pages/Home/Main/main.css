@@ -1,0 +1,173 @@
+.box-main {
+  width: 63%;
+  min-height: 100vh;
+  margin: auto;
+  margin-left: 28.5%;
+}
+
+.box-main main .cover-img {
+  padding: 2vh 5vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 5vh !important;
+  margin: 0 auto;
+  background: #e6f2fd;
+  width: 95%;
+  min-height: 45vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.box-main main .cover-img h1,
+.box-main main .cover-img h5 {
+  font-weight: 600;
+}
+
+.box-main main .cover-img .des {
+  margin-top: 4vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+}
+
+.box-main main .cover-img .des h1 {
+  font-family: "Times New Roman";
+  font-size: 75px;
+  line-height: 85px;
+}
+
+.box-main main .cover-img .des p {
+  font-size: 16px;
+}
+
+.box-main main .cover-img img {
+  width: 195px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.box-main main .list-book .navigasi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2vh 5vh;
+  margin-top: 1vh;
+  position: relative;
+}
+
+.box-main main .list-book .navigasi h1 {
+  font-size: 25px;
+  margin-left: -1.5%;
+  font-weight: 700;
+}
+
+.box-main main .list-book .navigasi .btn-category {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-right: -1.5%;
+  font-weight: 600;
+}
+
+.box-main main .list-book .navigasi .ulCategory {
+  height: 3vh;
+  position: absolute;
+  top: 2vh;
+  right: 18vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  padding: 2vh 3vh;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 0 10px gray;
+          box-shadow: 0 0 10px gray;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: none;
+  overflow: hidden;
+}
+
+.box-main main .list-book .navigasi .ulCategory li {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+.box-main main .list-book .navigasi .ulCategory li:hover {
+  background: #ebebeb;
+}
+
+.box-main main .list-book .navigasi .ulCategory.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 28vh;
+}
+
+.box-main main .list-book ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.box-main main .list-book ul div {
+  width: 22vh;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-bottom: 5vh !important;
+  margin: 0 3vh;
+}
+
+.box-main main .list-book ul div img {
+  width: 100%;
+}
+
+.box-main main .list-book ul div h5,
+.box-main main .list-book ul div p {
+  padding: 0 5px;
+}
+
+.box-main main .list-book ul div h5 {
+  font-size: 16px;
+  margin: 5px 0;
+  font-weight: 700;
+}
+
+.box-main main .list-book ul div p {
+  font-size: 14px;
+}
+
+.box-main main .list-book ul div:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */

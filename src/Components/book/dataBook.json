@@ -1,0 +1,49 @@
+[{
+        "id": 1,
+        "name": "Randall Munroe",
+        "title": "What if? Absurd Questions",
+        "ISBN": "9781789807554",
+        "status": "approve",
+        "img": "require('./../../Components/book/What-If.png')"
+    },
+    {
+        "id": 2,
+        "name": "Morris Williamson",
+        "title": "Glyph: New look on things",
+        "ISBN": "9781789807555",
+        "status": "approve",
+        "img": "require('./../../Components/book/Glyph.png')"
+    },
+    {
+        "id": 3,
+        "name": "J.K. Rownling",
+        "title": "Harry Potter and Goblet of Fire",
+        "ISBN": "9781789807666",
+        "status": "cancel",
+        "img": "require(''./../../Components/book/Harry-Potter-Goblet-of-Fire.png')"
+    },
+    {
+        "id": 4,
+        "name": "Rachel Hartman",
+        "title": "Tess on the Road",
+        "ISBN": "9781789807576",
+        "status": "waiting",
+        "img": "require('./../../Components/book/Tes-on-the-Road.png')"
+    },
+    {
+        "id": 5,
+        "name": "Aziz Oni On",
+        "title": "7ds.jpg",
+        "ISBN": "9781789807709",
+        "status": "waiting",
+        "img": "require('./../../Components/book/Tes-on-the-Road.png')"
+    },
+    {
+        "id": 6,
+        "name": "Sugeng No Pants",
+        "title": "fixyou.jpg",
+        "ISBN": "9781789807000",
+        "status": "waiting",
+        "img": "require('./../../Components/book/Tes-on-the-Road.png')"
+    }
+]

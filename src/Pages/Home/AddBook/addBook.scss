@@ -1,0 +1,57 @@
+.box-add {
+    // background: lightgreen;
+    width: 80%;
+    margin-left: 35vh;
+    margin-top: 5vh;
+    .box-input {
+        background: rgb(255, 255, 255);
+        margin-left: 15.5%;
+        position: relative;
+        h1 {
+            font-size: 29px;
+            margin-bottom: 2vh;
+            font-weight: 700;
+            align-self: flex-start;
+            display: inline-block;
+        }
+        form {
+            margin-top: -1.3vh;
+            // background: salmon;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            width: 80%;
+            height: 75vh;
+            overflow: auto;
+            input,
+            textarea {
+                height: 6vh;
+                padding: 0 15px;
+                box-sizing: border-box;
+                border: 3px solid rgb(192, 192, 192);
+                border-radius: 5px;
+            }
+            textarea {
+                max-height: 18vh;
+                min-height: 18vh;
+                padding-top: 10px;
+                max-width: 100%;
+                min-width: 100%;
+            }
+        }
+        .attach {
+            align-self: flex-start;
+            border: none;
+        }
+        .add-btn {
+            padding: 8px 15px;
+            color: white;
+            background: #ee4622;
+            border: none;
+            align-self: flex-end;
+            position: absolute;
+            right: 20.5%;
+            border-radius: 5px;
+        }
+    }
+}
