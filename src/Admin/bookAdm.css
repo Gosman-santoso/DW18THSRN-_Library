@@ -1,66 +1,86 @@
-.book-adm {
-    width: 100%;
-    min-height: 100vh;
-    margin: auto;
-    background: white;
-    position: relative;
-    z-index: 12;
+.box-AdmBook {
+  background: white;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 12;
 }
 
-.box-form-adm {
-    padding: 0 3vh;
-    width: 60%;
-    margin: auto;
-    padding-top: 20vh;
-    padding-bottom: 10vh;
-    /* background: lightgreen; */
+.box-AdmBook .box-input {
+  background: white;
+  position: relative;
+  margin: auto;
+  width: 70%;
 }
 
-.box-form-adm h1 {
-    margin: auto;
-    font-size: 30px;
+.box-AdmBook .box-input input.status {
+  display: none;
 }
 
-.box-form-adm form {
-    margin-top: -1.3vh;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    height: 75vh;
-    overflow: auto;
-    margin: auto;
+.box-AdmBook .box-input h1 {
+  font-size: 27px;
+  margin-bottom: 2.3vh;
+  font-weight: 700;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: inline-block;
 }
 
-.box-form-adm input,
-.box-form-adm textarea {
-    height: 6vh;
-    padding: 0 15px;
-    box-sizing: border-box;
-    border: 2.5px solid rgb(192, 192, 192);
-    border-radius: 5px;
+.box-AdmBook .box-input form {
+  margin-top: 2vh;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 85vh;
+  overflow: auto;
 }
 
-.box-form-adm textarea {
-    max-height: 18vh;
-    min-height: 18vh;
-    padding-top: 10px;
-    max-width: 100%;
-    min-width: 100%;
+.box-AdmBook .box-input form input,
+.box-AdmBook .box-input form textarea,
+.box-AdmBook .box-input form select {
+  height: 6vh;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2.5px solid silver;
+  border-radius: 5px;
 }
 
-.box-form-adm .attach {
-    align-self: flex-start;
-    border: none;
-    background-color: white;
+.box-AdmBook .box-input form textarea {
+  max-height: 18vh;
+  min-height: 18vh;
+  padding-top: 10px;
+  max-width: 100%;
 }
 
-.box-form-adm .add-btn {
-    padding: 8px 15px;
-    color: white;
-    background: #ee4622;
-    border: none;
-    align-self: flex-end;
-    position: absolute;
-    right: 21.5%;
-    border-radius: 5px;
+.box-AdmBook .box-input form select {
+  width: 100%;
 }
+
+.box-AdmBook .box-input input.attach {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 250px;
+  border: none;
+  padding: 0;
+}
+
+.box-AdmBook .box-input .add-btn {
+  -webkit-transform: translateY(-7vh);
+          transform: translateY(-7vh);
+  padding: 8px 15px;
+  color: white;
+  background: #ee4622;
+  border: none;
+  border-radius: 5px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+/*# sourceMappingURL=bookAdm.css.map */

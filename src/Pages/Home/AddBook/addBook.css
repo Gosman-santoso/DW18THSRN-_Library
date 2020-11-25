@@ -11,8 +11,8 @@
 }
 
 .box-add .box-input h1 {
-  font-size: 29px;
-  margin-bottom: 2vh;
+  font-size: 27px;
+  margin-bottom: 2.3vh;
   font-weight: 700;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -20,7 +20,8 @@
 }
 
 .box-add .box-input form {
-  margin-top: -1.3vh;
+  margin-top: 0.3vh;
+  background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,17 +32,18 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 80%;
-  height: 75vh;
+  height: 85vh;
   overflow: auto;
 }
 
 .box-add .box-input form input,
-.box-add .box-input form textarea {
+.box-add .box-input form textarea,
+.box-add .box-input form select {
   height: 6vh;
   padding: 0 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 3px solid silver;
+  border: 2.5px solid silver;
   border-radius: 5px;
 }
 
@@ -50,24 +52,29 @@
   min-height: 18vh;
   padding-top: 10px;
   max-width: 100%;
-  min-width: 100%;
 }
 
-.box-add .box-input .attach {
+.box-add .box-input form select {
+  width: 100%;
+}
+
+.box-add .box-input input.attach {
   -ms-flex-item-align: start;
       align-self: flex-start;
+  width: 250px;
   border: none;
+  padding: 0;
 }
 
 .box-add .box-input .add-btn {
+  -webkit-transform: translateY(-7vh);
+          transform: translateY(-7vh);
   padding: 8px 15px;
   color: white;
   background: #ee4622;
   border: none;
+  border-radius: 5px;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  position: absolute;
-  right: 20.5%;
-  border-radius: 5px;
 }
 /*# sourceMappingURL=addBook.css.map */

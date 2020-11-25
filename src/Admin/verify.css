@@ -1,0 +1,16 @@
+.box-verify {
+    width: 100%;
+    min-height: 87vh;
+    margin: auto;
+    position: relative;
+    z-index: 10;
+    background: rgb(240, 240, 240);
+}
+
+.box-verify .verify {
+    width: 75%;
+    margin: auto;
+    font-size: 15px;
+    padding-top: 5vh;
+    padding-bottom: 20vh;
+}

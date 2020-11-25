@@ -7,8 +7,8 @@
         margin-left: 25%;
         margin-top: 4.8vh;
         h1 {
-            font-size: 30px;
-            margin-bottom: 4vh;
+            font-size: 28px;
+            margin-bottom: 3vh;
             font-weight: 700;
         }
         .cover-profile {
@@ -16,8 +16,9 @@
             justify-content: space-around;
             align-items: center;
             width: 100%;
-            height: 45vh;
-            background-color: #FDEDE6;
+            min-height: 43vh;
+            padding: 3vh 0;
+            background-color: #fdede6;
             ul {
                 list-style: none;
                 display: flex;
@@ -28,7 +29,10 @@
                     display: flex;
                     align-items: center;
                     .logo-icon {
-                        width: 30px;
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 5px;
+                        transform: translateY(0.5vh);
                     }
                     span {
                         display: block;
@@ -42,9 +46,18 @@
             .box-gambar {
                 display: flex;
                 flex-direction: column;
+                width: 30vh;
+                min-height: 30vh;
+                // background: lightgreen;
+                img {
+                    width: 100%;
+                    height: 30vh;
+                    background: rgb(255, 255, 255);
+                    border-radius: 8px;
+                }
                 button {
                     padding: 13px 15px;
-                    background: #EE4622;
+                    background: #ee4622;
                     border: none;
                     color: white;
                     border-radius: 5px;
@@ -54,20 +67,33 @@
         }
         .list-book {
             height: 50vh;
-            // background-color: lightgreen;
+            margin: 0;
+            padding: 0;
             h1 {
                 margin-bottom: 1vh;
             }
             ul {
                 list-style: none;
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-start;
+                margin: 0 !important;
+                padding: 0 !important;
+                position: relative;
+                flex-wrap: wrap;
+                li {
+                    width: 25%;
+                }
                 div {
                     width: 22vh;
+                    min-height: 42vh;
+                    position: relative;
                     transition: 0.2s;
                     overflow: hidden;
+                    background: rgb(245, 245, 245);
+                    border-radius: 8px 8px 0 0;
                     img {
                         width: 100%;
+                        height: 60%;
                     }
                     h5,
                     p {
@@ -78,7 +104,23 @@
                         font-weight: 700;
                     }
                     p {
+                        display: inline-block;
+                        position: absolute;
+                        bottom: -2.5vh;
                         font-size: 14px;
+                    }
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        background: rgba(255, 255, 255, 0.74);
+                        h5 {
+                            display: inline-block;
+                            text-align: center;
+                            margin-top: 45%;
+                        }
                     }
                 }
                 div:hover {

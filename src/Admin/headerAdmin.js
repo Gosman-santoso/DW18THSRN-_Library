@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
+
 import { Link } from "react-router-dom";
 import { CartContext } from "./../Context/cartContext";
+import { Dropdown, DropdownButton, ButtonGroup } from "react-bootstrap";
 
 function HeaderAdm() {
   const [state, dispatch] = useContext(CartContext);
   return (
     <div
       style={{
-        position: "fixed",
+        position: "relative",
         top: "0",
         zIndex: "13",
         width: "100%",
@@ -17,11 +19,11 @@ function HeaderAdm() {
       <div
         style={{
           display: "flex",
-          width: "80%",
+          width: "75%",
           height: "13vh",
           margin: "auto",
           justifyContent: "space-between",
-          //   background: "salmon",
+          // background: "salmon",
           alignItems: "center"
         }}
       >
@@ -60,32 +62,50 @@ function HeaderAdm() {
               justifyContent: "space-between",
               width: "60%"
             }}
-          >
-            <Link to="/bookAdm" style={{ color: "black" }}>
-              <li>Add Book</li>
-            </Link>
-            <Link
-              to="/"
-              style={{ color: "black" }}
-              onClick={() => {
-                dispatch({
-                  type: "LOGOUT"
-                });
-              }}
-            >
-              <li>Logout</li>
-            </Link>
-          </ul>
-          <img
-            src={require("./../Components/img/Ellipse1.png")}
-            alt=""
-            style={{
-              width: "60px",
-              height: "60px",
-              borderRadius: "50%",
-              border: "2px solid gray"
-            }}
-          />
+          ></ul>
+
+          <Dropdown>
+            <Dropdown.Toggle variant="light" id="dropdown-basic">
+              <img
+                src={require("./../Components/img/Ellipse1.png")}
+                alt=""
+                style={{
+                  width: "60px",
+                  height: "60px",
+                  borderRadius: "50%",
+                  border: "2px solid gray"
+                }}
+              />
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Link to="/mainAdm" style={{ color: "black" }}>
+                <Dropdown.Item href="#/action-1">
+                  <li>Verifycation</li>
+                </Dropdown.Item>
+              </Link>
+
+              <Link to="/bookAdm" style={{ color: "black" }}>
+                <Dropdown.Item href="#/action-2">
+                  <li>Add Book</li>
+                </Dropdown.Item>
+              </Link>
+
+              <Link
+                to="/"
+                style={{ color: "black" }}
+                onClick={() => {
+                  dispatch({
+                    type: "LOGOUT"
+                  });
+                }}
+              >
+                <Dropdown.Item href="#/action-3">
+                  <li>Logout</li>
+                </Dropdown.Item>
+              </Link>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
       </div>
     </div>

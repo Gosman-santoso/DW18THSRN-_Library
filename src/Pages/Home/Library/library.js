@@ -1,87 +1,80 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { API, urlAsset } from "./../../../config/api";
+import { CartContext } from "../../../Context/cartContext";
+import { useHistory } from "react-router-dom";
 
 import "./library.css";
 
-class Library extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      data: [
-        {
-          name: "Randall Munroe",
-          title: "What if? Absurd Questions",
-          img: require("./../../../Components/book/What-If.png")
-        },
-        {
-          name: "Morris Williamson",
-          title: "Glyph: New look on things",
-          img: require("./../../../Components/book/Glyph.png")
-        },
-        {
-          name: "J.K. Rownling",
-          title: "Harry Potter and Goblet of Fire",
-          img: require("./../../../Components/book/Harry-Potter-Goblet-of-Fire.png")
-        },
-        {
-          name: "Rachel Hartman",
-          title: "Tess on the Road",
-          img: require("./../../../Components/book/Tes-on-the-Road.png")
-        },
-        {
-          name: "Randall Munroe",
-          title: "What if? Absurd Questions",
-          img: require("./../../../Components/book/What-If.png")
-        },
-        {
-          name: "Morris Williamson",
-          title: "Glyph: New look on things",
-          img: require("./../../../Components/book/Glyph.png")
-        },
-        {
-          name: "J.K. Rownling",
-          title: "Harry Potter and Goblet of Fire",
-          img: require("./../../../Components/book/Harry-Potter-Goblet-of-Fire.png")
-        },
-        {
-          name: "Rachel Hartman",
-          title: "Tess on the Road",
-          img: require("./../../../Components/book/Tes-on-the-Road.png")
-        }
-      ]
+function Library() {
+  const [state, dispatch] = useContext(CartContext);
+  const history = useHistory();
+
+  // // get book with id user
+  const [library, setLibrary] = useState([]);
+  const [booksUser, setBooks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [detailBook, setDetailBook] = useState([]);
+
+  useEffect(() => {
+    const loadLibrary = async () => {
+      try {
+        setLoading(true);
+
+        const res = await API.get(`/user/${state.user?.id}`);
+        setLibrary(res.data.data.User.library);
+        setLoading(false);
+      } catch (err) {
+        setLoading(false);
+        console.log(err);
+      }
     };
-  }
+    loadLibrary();
+  }, []);
 
-  movePage(item) {
-    console.log("Tittle : " + item.title);
-  }
+  // console.log(library.bookId);
 
-  render() {
-    return (
-      <div className="box-library">
-        <div className="list-book">
-          <h1>List Book</h1>
-          <ul>
-            {this.state.data.map(item => (
-              <Link
-                to="/detail"
-                style={{ textDecoration: "none", color: "black" }}
-              >
-                <li>
-                  <div onClick={this.movePage.bind(this, item)}>
-                    <img src={item.img} alt="book" />
-                    <h5>{item.title}</h5>
-                    <p>{item.name}</p>
-                  </div>
-                </li>
-              </Link>
-            ))}
-          </ul>
-        </div>
+  useEffect(() => {
+    const loadBooks = async () => {
+      try {
+        setLoading(true);
+
+        const res = await API.get(`/user/${state.user?.id}`);
+        setDetailBook(res.data.data.User.library);
+        setLoading(false);
+      } catch (err) {
+        setLoading(false);
+        console.log(err);
+      }
+    };
+    loadBooks();
+  }, []);
+
+  return (
+    <div className="box-library">
+      <div className="list-book">
+        <h1>List Book</h1>
+        <ul>
+          {loading || !booksUser ? (
+            <h1>Loading</h1>
+          ) : (
+            detailBook.map(bookUser => (
+              <li onClick={() => history.push(`/detail/${bookUser.id}`)}>
+                <div>
+                  <img
+                    src={urlAsset.thumbnail + bookUser.book?.thumbnail}
+                    alt="book"
+                  />
+                  <h5>{bookUser.book?.title}</h5>
+                  <p>{bookUser.book?.title}</p>
+                </div>
+              </li>
+            ))
+          )}
+        </ul>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default Library;

@@ -1,113 +1,93 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { CgNametag } from "react-icons/cg";
+import { API, urlAsset } from "./../../../config/api";
+
+import { Link, useHistory } from "react-router-dom";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 
 import "./main.css";
 
-class Main extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      data: [
-        {
-          name: "Randall Munroe",
-          title: "What if? Absurd Questions",
-          img: require("./../../../Components/book/What-If.png")
-        },
-        {
-          name: "Morris Williamson",
-          title: "Glyph: New look on things",
-          img: require("./../../../Components/book/Glyph.png")
-        },
-        {
-          name: "J.K. Rownling",
-          title: "Harry Potter and Goblet of Fire",
-          img: require("./../../../Components/book/Harry-Potter-Goblet-of-Fire.png")
-        },
-        {
-          name: "Rachel Hartman",
-          title: "Tess on the Road",
-          img: require("./../../../Components/book/Tes-on-the-Road.png")
-        },
-        {
-          name: "Randall Munroe",
-          title: "What if? Absurd Questions",
-          img: require("./../../../Components/book/What-If.png")
-        },
-        {
-          name: "Morris Williamson",
-          title: "Glyph: New look on things",
-          img: require("./../../../Components/book/Glyph.png")
-        },
-        {
-          name: "J.K. Rownling",
-          title: "Harry Potter and Goblet of Fire",
-          img: require("./../../../Components/book/Harry-Potter-Goblet-of-Fire.png")
-        },
-        {
-          name: "Rachel Hartman",
-          title: "Tess on the Road",
-          img: require("./../../../Components/book/Tes-on-the-Road.png")
-        }
-      ]
+const Main = () => {
+  const history = useHistory();
+  const [booksUser, setBooks] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadBooks = async () => {
+      try {
+        setLoading(true);
+
+        const res = await API.get("/books");
+
+        setBooks(res.data.data.books);
+        setLoading(false);
+      } catch (err) {
+        setLoading(false);
+        console.log(err);
+      }
     };
-  }
+    loadBooks();
+  }, []);
 
-  movePage(item) {
-    console.log("Tittle : " + item.title);
-  }
+  // console.log(booksUser);
 
-  render() {
-    return (
-      <div className="box-main">
-        <main>
-          <div className="cover-img">
-            <div className="des">
-              <h1>
-                Share, read and <i>love</i>
-              </h1>
-              <p>Reading is fascinating</p>
-            </div>
-            <img
-              src={require("./../../../Components/book/Fix-You-by-ACI-Nouraicha-Afta1.png")}
-              alt=""
-            />
+  return (
+    <div className="box-main">
+      <main>
+        <div className="cover-img">
+          <div className="des">
+            <h1>
+              Share, read and <i> love </i>
+            </h1>
+            <p> Reading is fascinating </p>
           </div>
-
-          <div className="list-book">
-            <div className="navigasi">
-              <h1>List Book</h1>
-              <button className="btn-category">Category</button>
-              <ul className="ulCategory">
-                <li>Romance</li>
-                <li>Comedy</li>
-                <li>Sci-Fi</li>
-                <li>History</li>
-                <li>Documentary</li>
-              </ul>
+          <img
+            src={require("./../../../Components/book/Fix-You-by-ACI-Nouraicha-Afta1.png")}
+            alt=""
+          />
+        </div>
+        <div className="list-book">
+          <div className="navigasi">
+            <h1> List Book </h1>
+            <div>
+              <div className="mb-2">
+                {["left"].map(direction => (
+                  <DropdownButton
+                    key={direction}
+                    id={`dropdown-button-drop-${direction}`}
+                    drop={direction}
+                    title={` Category `}
+                    variant="light"
+                  >
+                    <Dropdown.Item eventKey="1"> Romance </Dropdown.Item>
+                    <Dropdown.Item eventKey="2"> Comedy </Dropdown.Item>
+                    <Dropdown.Item eventKey="4"> Sci - Fi </Dropdown.Item>
+                    <Dropdown.Item eventKey="5"> History </Dropdown.Item>
+                    <Dropdown.Item eventKey="6"> Documentacy </Dropdown.Item>
+                  </DropdownButton>
+                ))}
+              </div>
             </div>
-            <ul>
-              {this.state.data.map(item => (
-                <Link
-                  to="/detail"
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  <li>
-                    <div onClick={this.movePage.bind(this, item)}>
-                      <img src={item.img} alt="book" />
-                      <h5>{item.title}</h5>
-                      <p>{item.name}</p>
-                    </div>
-                  </li>
-                </Link>
-              ))}
-            </ul>
           </div>
-        </main>
-      </div>
-    );
-  }
-}
+          <ul>
+            {loading || !booksUser ? (
+              <h1> Loading... </h1>
+            ) : (
+              booksUser.map(book => (
+                <li onClick={() => history.push(`/detail/${book.id}`)}>
+                  <div>
+                    <img src={urlAsset.thumbnail + book.thumbnail} alt="book" />
+                    <h5> {book.title} </h5>
+                    <p> {book.user_id.fullName} </p>
+                  </div>
+                </li>
+              ))
+            )}
+          </ul>
+        </div>
+      </main>
+    </div>
+  );
+};
 
 export default Main;

@@ -5,26 +5,34 @@
     align-self: flex-start;
     // background: salmon;
     .list-book {
-        margin-left: 23.5%;
-        margin-top: 4.5vh;
-        // background: salmon;
+        margin-left: 23.8%;
+        margin-top: 4.8vh;
+        // background: lightblue;
         h1 {
-            font-size: 30px;
+            font-size: 27px;
             margin-left: 2vh;
-            margin-bottom: 2vh;
+            margin-bottom: 1.3vh;
             font-weight: 700;
         }
         ul {
-            // background: lightblue;
+            // background: lightgreen;
             list-style: none;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            li {
+                width: 25%;
+            }
             div {
-                width: 22vh;
+                width: 25vh;
+                min-height: 48vh;
+                position: relative;
                 transition: 0.2s;
                 margin-bottom: 5vh;
                 margin: 2vh 2vh;
+                background: rgb(247, 247, 247);
                 img {
                     width: 100%;
                 }
@@ -38,6 +46,9 @@
                     font-weight: 700;
                 }
                 p {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: -2.5vh;
                     font-size: 14px;
                 }
             }

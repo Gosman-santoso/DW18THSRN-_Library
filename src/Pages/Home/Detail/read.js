@@ -1,15 +1,18 @@
 import React from "react";
 
 import { ReactReader } from "react-reader";
-import { Link } from "react-router-dom";
+import { Link, useParams, useHistory } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 
 import Alice from "./../../../Components/book/Alices Adventures in Wonderland.epub";
 
 function Read() {
+  const { id } = useParams();
+  const history = useHistory();
+
   return (
     <div style={{ height: "100vh", position: "relative" }}>
-      <Link to="./detail">
+      <Link onClick={() => history.push(`detail/${id}`)}>
         <button
           style={{
             position: "absolute",

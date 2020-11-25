@@ -23,11 +23,13 @@ const Head = () => {
         </Link>
 
         <div className="photo">
-          <img src={require("./../../../Components/img/Ellipse1.png")} alt="" />
-          <h2>Username</h2>
-          {/* {JSON.stringify(state)} */}
+          <div>
+            <img src={state.user?.avatar} alt="photo" />
+          </div>
+          <h2> {state.user?.fullName} </h2>
         </div>
       </div>
+
       <div className="menu">
         <Link to="/profile" style={{ textDecoration: "none" }}>
           <p className="nav-btn">
@@ -45,6 +47,7 @@ const Head = () => {
           </p>
         </Link>
       </div>
+
       <div className="logout">
         <Link
           to="/"

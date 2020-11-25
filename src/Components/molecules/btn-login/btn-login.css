@@ -1,0 +1,63 @@
+/* global input form control */
+
+.modal-body {
+    background: white;
+    padding: 5vh;
+}
+
+.form-control {
+    background: rgb(77, 77, 77);
+    color: white;
+    border: 2px solid rgba(228, 228, 228, 0.74);
+}
+
+.close {
+    opacity: 0.8;
+}
+
+.form-control::placeholder {
+    color: rgb(180, 179, 179);
+}
+
+.modalShow {
+    margin-top: 20vh;
+}
+
+.modal-content {
+    width: 350px !important;
+    margin: auto;
+    align-self: center;
+}
+
+form .inputan {
+    font-family: "Poppins";
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border: 2px solid #b4b4b4;
+    border-radius: 5px;
+    background: white;
+}
+
+.inputan::placeholder {
+    color: rgb(172, 172, 172);
+}
+
+.box-login-landing .landingBtnLogin,
+.login-btn {
+    border: none;
+    padding: 1.3vh 8vh;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.landingBtnLogin {
+    background: rgb(219, 219, 219) !important;
+}
+
+form .login-btn {
+    background: #ee4622;
+    width: 100%;
+    margin-top: 1.5vh;
+    color: white;
+}

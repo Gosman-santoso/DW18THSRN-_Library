@@ -54,53 +54,26 @@
                     margin-left: -1.5%;
                     font-weight: 700;
                 }
-                .btn-category {
-                    padding: 8px 15px;
-                    border: none;
-                    border-radius: 5px;
-                    margin-right: -1.5%;
-                    font-weight: 600;
-                }
-                .ulCategory {
-                    height: 3vh;
-                    position: absolute;
-                    top: 2vh;
-                    right: 18vh;
-                    display: flex;
-                    flex-direction: column;
-                    background-color: white;
-                    padding: 2vh 3vh;
-                    border-radius: 8px;
-                    box-shadow: 0 0 10px gray;
-                    transition: 0.3s;
-                    display: none;
-                    overflow: hidden;
-                    li {
-                        transition: 0.2s;
-                        cursor: pointer;
-                        padding: 0 5px;
-                        border-radius: 5px;
-                    }
-                    li:hover {
-                        background: rgb(235, 235, 235);
-                    }
-                }
-                .ulCategory.active {
-                    display: flex;
-                    height: 28vh;
-                }
             }
             ul {
                 list-style: none;
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
-                // background: lightgreen;
+                margin-left: -6vh;
+                li {
+                    width: 25%;
+                }
                 div {
                     width: 22vh;
+                    min-height: 40vh;
                     transition: 0.2s;
                     margin-bottom: 5vh !important;
                     margin: 0 3vh;
+                    position: relative;
+                    background: rgb(245, 245, 245);
+                    border-radius: 8px 8px 0 0;
+                    overflow: hidden;
                     img {
                         width: 100%;
                     }
@@ -114,6 +87,9 @@
                         font-weight: 700;
                     }
                     p {
+                        display: inline-block;
+                        position: absolute;
+                        bottom: -2.5vh;
                         font-size: 14px;
                     }
                 }

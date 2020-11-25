@@ -7,14 +7,14 @@
 }
 
 .box-library .list-book {
-  margin-left: 23.5%;
-  margin-top: 4.5vh;
+  margin-left: 23.8%;
+  margin-top: 4.8vh;
 }
 
 .box-library .list-book h1 {
-  font-size: 30px;
+  font-size: 27px;
   margin-left: 2vh;
-  margin-bottom: 2vh;
+  margin-bottom: 1.3vh;
   font-weight: 700;
 }
 
@@ -23,19 +23,28 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.box-library .list-book ul li {
+  width: 25%;
 }
 
 .box-library .list-book ul div {
-  width: 22vh;
+  width: 25vh;
+  min-height: 48vh;
+  position: relative;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   margin-bottom: 5vh;
   margin: 2vh 2vh;
+  background: #f7f7f7;
 }
 
 .box-library .list-book ul div img {
@@ -54,6 +63,9 @@
 }
 
 .box-library .list-book ul div p {
+  display: inline-block;
+  position: absolute;
+  bottom: -2.5vh;
   font-size: 14px;
 }
 
